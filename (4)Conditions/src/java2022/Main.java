@@ -4,14 +4,14 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		int sayi=45;
+		int number=45;
 		
-		if(sayi<12) {
-			System.out.println("Sayı 12 den küçük");
-		}else if(sayi==12){
-			System.out.println("Sayı 12 ye eşittir");
+		if(number<12) {
+			System.out.println("less than 12");
+		}else if(number==12){
+			System.out.println("equal 12");
 		}else {
-			System.out.println("Sayı 12 den büyüktür");
+			System.out.println("over 12");
 		
 	}
 
