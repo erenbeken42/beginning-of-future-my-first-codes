@@ -4,19 +4,19 @@ public class Main {
 
 	public static void main(String[] args) {
 		
-		int sayi1=11;
-		sayi1=1234;
+		int number1=11;
+		number1=1234;
 		
 		
-		byte sayı2=-23;
-		sayı2=127;
+		byte number2=-23;
+		number2=127;
 		
 		
-		double sayı3=12.5;
+		double number3=12.5;
 		
-		char karakter ='f';
+		char character ='f';
 		
-		boolean dogruMu = true;
+		boolean isItTrue = true;
 		dogruMu= false;
 		
 	}
