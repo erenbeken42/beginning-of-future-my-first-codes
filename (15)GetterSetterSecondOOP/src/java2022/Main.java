@@ -30,7 +30,11 @@ public class Main {
 		
 		for(Product product : products) {
 			System.out.println(product.getName());	
-			
+			System.out.println(product.getDiscount());
+			System.out.println(product.getUnitPrice());
+			System.out.println(product.getUnitsInStock());
+			System.out.println(product.getImageUrl());
+			System.out.println("----------------------");
 		}
 		
 		
