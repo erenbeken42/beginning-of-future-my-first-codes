@@ -22,7 +22,7 @@ public class ProductSManager {
 
 	public void add(Product product) throws Exception {
 		if(product.getUnitPrice()<10) {
-			throw new Exception("Ürün fiyatı 10 tlnin altında olamaz");
+			throw new Exception("unit price cannot be below 10");
 		}
 		
 		
