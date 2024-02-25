@@ -6,62 +6,62 @@ public class Main {
 		Avatar avatar1[] = new Avatar[5];
 		Avatar avatar2[] = new Avatar[5];
 		Random r=new Random();
-		int puan1=0;
-		int puan2=0;
+		int point1=0;
+		int point2=0;
 		
 
 	for(int i=0; i<avatar1.length; i++) {
 		avatar1[i] = new Avatar();
 		avatar2[i] = new Avatar();
-		avatar1[i].setGuc(r.nextInt(10));
-		avatar2[i].setGuc(r.nextInt(10));
-		avatar1[i].setTur(r.nextInt(2));
-		avatar2[i].setTur(r.nextInt(2));
+		avatar1[i].setPower(r.nextInt(10));
+		avatar2[i].setPower(r.nextInt(10));
+		avatar1[i].setType(r.nextInt(2));
+		avatar2[i].setType(r.nextInt(2));
 	}
 	for(int i=0; i<avatar1.length; i++) {
-		System.out.println("1. oyuncunun "+(i+1)+". turdaki tür ve gücü");
-		System.out.println(avatar1[i].getTur()+" "+avatar1[i].getGuc());
-		System.out.println("2. oyuncunun "+(i+1)+". turdaki tür ve gücü");
-		System.out.println(avatar2[i].getTur()+" "+avatar2[i].getGuc());
+		System.out.println("Type and power of player 1 in round "+(i+1)+"");
+		System.out.println(avatar1[i].getType()+" "+avatar1[i].getPower());
+		System.out.println("Type and power of player 2 in round "+(i+1)+"");
+		System.out.println(avatar2[i].getType()+" "+avatar2[i].getPower());
 	}
 	
 	
 	
 	
 	for(int i=0; i<avatar1.length; i++) {
-		if(avatar1[i].getTur()==avatar2[i].getTur()) {
-			if(avatar1[i].getGuc()>avatar2[i].getGuc()) {
-				puan1=puan1+avatar1[i].getGuc()-avatar2[i].getGuc();
-			System.out.println((i+1)+".turun kazananı 1.oyuncu"+" bu tur kazanılan + "+(avatar1[i].getGuc()-avatar2[i].getGuc()));
+		if(avatar1[i].getType()==avatar2[i].getType()) {
+			if(avatar1[i].getPower()>avatar2[i].getPower()) {
+				point1=point1+avatar1[i].getPower()-avatar2[i].getPower();
+			System.out.println("the winner of the round-"+(i+1)+" player 1"+ "points received this round: + "+(avatar1[i].getPower()-avatar2[i].getPower()));
 			}
-			else if(avatar1[i].getGuc()<avatar2[i].getGuc()) {
-				puan2=puan2+avatar2[i].getGuc()-avatar1[i].getGuc();
-				System.out.println((i+1)+".turun kazananı 2.oyuncu"+" bu tur kazanılan + "+(avatar2[i].getGuc()-avatar1[i].getGuc()));}
+			else if(avatar1[i].getPower()<avatar2[i].getPower()) {
+				point2=point2+avatar2[i].getPower()-avatar1[i].getPower();
+				System.out.println("winner of round-"+(i+1)+" player 2"+" points received this round: + "+(avatar2[i].getPower()-avatar1[i].getPower()));}
 			
 			
 			
 			else {
-				System.out.println((i+1)+".turda kimse kazanmadı");
+				System.out.println("Nobody won in round"+(i+1));
 			}
 		
 		}
-	else if(avatar1[i].getTur()>avatar2[i].getTur()) {
-			puan1=puan1+10;
-			System.out.println((i+1)+".turun kazananı 1.oyuncu bu tur kazanılan +10");
+	else if(avatar1[i].getType()>avatar2[i].getType()) {
+		point1=point1+10;
+			System.out.println("winner of the round"+(i+1)+ "is the 2nd player +10 earned this round");
 		}
 	else {
-		puan2=puan2+10;
-		System.out.println((i+1)+".turun kazananı 2.oyuncu bu tur kazanılan +10");
+		point2=point2+10;
+		System.out.println("winner of the round"+(i+1)+ "is the 2nd player +10 earned this round");
 	}
 	}
-	if(puan1>puan2) {
-		System.out.println("1.oyuncu"+puan1+"puanla kazandı");
+	if(point1>point2) {
+		System.out.println("player 1 won with"+point1+"points");
 	}
-	else if(puan2>puan1) {
-		System.out.println("2.oyuncu"+puan2+"puanla kazandı");
+	else if(point2>point1) {
+		System.out.println("player 1 won with"+point2+"points");
 	}
 	else {
-		System.out.println("puanlar eşit kimse kazanamadı"+puan1);
+		System.out.println("points equal, no one won"+point1);
 	}
 	}
 

@@ -1,18 +1,18 @@
 
 public class Avatar {
-	private int Tur,Guc;
+	private int Type,Power;
 	
-	public void setTur(int tur) {
-		Tur=tur;
+	public void setType(int type) {
+		Type=type;
 	}
-	public void setGuc(int guc) {
-		Guc=guc;
+	public void setPower(int power) {
+		Power=power;
 	}
-	public int getTur() {
-		return Tur;
+	public int getType() {
+		return Type;
 	}
-	public int getGuc() {
-		return Guc;
+	public int getPower() {
+		return Power;
 	}
 
 
