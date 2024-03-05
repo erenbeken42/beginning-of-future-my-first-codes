@@ -1,4 +1,8 @@
-﻿--Select
+﻿https://www.w3schools.com/sql/trysql.asp?filename=trysql_select_all
+
+
+
+--Select
 Select ContactName Adi,CompanyName SirketAdi,City Sehir from Customers
 --Allians
 
